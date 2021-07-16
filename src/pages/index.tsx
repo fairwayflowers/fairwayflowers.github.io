@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
-import { HeaderNav } from '../components/navigation'
+import HeaderNav from '../components/navigation'
 import styles from '../styles/core.module.css'
 
 export default function Home() {

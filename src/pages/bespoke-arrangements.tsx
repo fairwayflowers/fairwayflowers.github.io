@@ -1,8 +1,8 @@
 import React from 'react'
-import { HeaderNav } from '../components/navigation'
+import HeaderNav from '../components/navigation'
 import styles from '../styles/core.module.css'
 
-export default function Home() {
+export default function BespokeArrangements() {
   return (
     <div className={styles.container}>
     <HeaderNav pageTitle="Fairway Flowers - Bespoke Arrangements"></HeaderNav>
