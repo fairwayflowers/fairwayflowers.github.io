@@ -34,18 +34,20 @@ export default function HeaderNav(props: HeaderNavProperties) {
           </Head>
           <div>
             <ul>       
-              {NavigationPages.map((navlink, i) => {   
-                  return (
-                    <li key={i}>
-                      <Link href={navlink.path}>
-                        <a style={(currentPage == navlink.path)? {backgroundColor: "red"}: undefined}>{navlink.text}</a>
-                      </Link>
-                    </li>
-                    ) 
-                })}
+              {NavigationPages.map((navlink, i) => navigationLink(currentPage, navlink, i))}
             </ul>
           </div>
         </div>   
 
       )
+}
+
+function navigationLink(currentPage: string, navlink: NavigationPage, key: number) {
+    return (
+      <li key={key}>
+        <Link href={navlink.path}>
+          <a style={(currentPage == navlink.path)? {backgroundColor: "red"}: undefined}>{navlink.text}</a>
+        </Link>
+      </li>
+      ) 
 }
