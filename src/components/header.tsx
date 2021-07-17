@@ -1,11 +1,8 @@
+import { CssBaseline } from "@material-ui/core";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from 'next/router'
 import React from "react";
-
-interface HeaderNavProperties {
-  pageTitle: string
-}
 
 interface NavigationPage {
   path: string,
@@ -22,16 +19,12 @@ const NavigationPages: NavigationPage[] = [
   {path:"/workshops", text: "Workshops"}
 ]
 
-export default function HeaderNav(props: HeaderNavProperties) {
+export default function Header() {
       const router = useRouter();
       const currentPage = router.pathname;
 
       return (   
         <div>
-          <Head>
-            <title>{props.pageTitle}</title>
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
           <div>
             <ul>       
               {NavigationPages.map((navlink, i) => navigationLink(currentPage, navlink, i))}

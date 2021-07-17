@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import React from 'react'
-import HeaderNav from '../components/navigation'
-import styles from '../styles/core.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <HeaderNav pageTitle="Fairway Flowers"></HeaderNav>
+    <>
+      <Head>
+        <title>Fairway Flowers</title>
+      </Head>
       <h1>Fairway Flowers</h1>
       <h2>Cut Flowers, Petal Confetti and Arrangements</h2>
       <h3>Fairway Flowers gives individual care and attention to all your floral visions.</h3>
@@ -30,6 +30,6 @@ export default function Home() {
         <h4>Events</h4>
         <p>We can attend your events year round.</p>
       </div>
-    </div>
+    </>
   )
 }
