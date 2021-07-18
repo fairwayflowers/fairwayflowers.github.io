@@ -69,16 +69,17 @@ export default function Header() {
   };
   return (
     <>
-
-      <IconButton
-        color="inherit"
-        aria-label="open drawer"
-        onClick={handleDrawerOpen}
-        edge="start"
-        className={classes.menuButton}
-      >
-        <MenuIcon />
-      </IconButton>
+      <div>
+        <IconButton
+          color="inherit"
+          aria-label="open drawer"
+          onClick={handleDrawerOpen}
+          edge="start"
+          className={classes.menuButton}
+        >
+          <MenuIcon />
+        </IconButton>
+      </div>
       <Drawer
         className={classes.drawer}
         variant="persistent"
