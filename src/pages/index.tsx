@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
+import FeatureImage from '../components/feature-image'
 
 export default function Home() {
   return (
@@ -7,8 +8,12 @@ export default function Home() {
       <Head>
         <title>Fairway Flowers</title>
       </Head>
-      <h1>Fairway Flowers</h1>
-      <h2>Cut Flowers, Petal Confetti and Arrangements</h2>
+      <FeatureImage image="/images/bucket_of_flowers.JPG">
+        <>
+          <h1>Fairway Flowers</h1>
+          <h2>Cut Flowers, Petal Confetti and Arrangements</h2>
+        </>
+      </FeatureImage>
       <h3>Fairway Flowers gives individual care and attention to all your floral visions.</h3>
       <div>
         <h4>Cut Flowers</h4>

@@ -48,8 +48,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
   },
 }));
 
@@ -106,8 +104,8 @@ export default function Header() {
 
 function navigationLink(currentPage: string, navlink: NavigationPage, key: number) {
   return (
-    <Link href={navlink.path}>
-      <ListItem button key={key} style={(currentPage == navlink.path) ? { backgroundColor: "rgba(0,0,0,0.1)" } : undefined}>
+    <Link key={key} href={navlink.path}>
+      <ListItem button style={(currentPage == navlink.path) ? { backgroundColor: "rgba(0,0,0,0.1)" } : undefined}>
         <a>{navlink.text}</a>
       </ListItem>
     </Link>

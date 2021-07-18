@@ -1,0 +1,17 @@
+.headerImageContainer {
+    width: 100%;
+    display: flex;
+}
+
+.headerImageBanner{
+    width: 100%;
+    padding: 1em 0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+}
+
+.headerImage {
+    width: 100%;
+    position: relative;
+}
