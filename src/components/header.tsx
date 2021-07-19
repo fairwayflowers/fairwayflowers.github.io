@@ -42,7 +42,7 @@ export default function Header() {
 
 function navigationLink(currentPage: string, navlink: NavigationPage, key: number) {
   return (
-        <Nav.Item>
+        <Nav.Item key={key}>
           <Nav.Link className={(currentPage == navlink.path) ? "active" : ""} href={navlink.path}>
             {navlink.text}
           </Nav.Link>
