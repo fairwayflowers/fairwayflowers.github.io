@@ -1,9 +1,10 @@
 import * as React from 'react'
+import 'bootstrap/dist/css/bootstrap.css'
 import Head from 'next/head'
 import Header from '../header'
 
 export const Layout: React.FunctionComponent = props =>
-  <div id="layout">
+  <>
     <Head>
       <link rel="icon" href="/favicon.ico" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
@@ -14,4 +15,4 @@ export const Layout: React.FunctionComponent = props =>
     <main>
       {props.children ?? <></>}
     </main>
-  </div>
+  </>
