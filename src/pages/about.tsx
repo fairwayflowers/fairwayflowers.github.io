@@ -15,7 +15,7 @@ export default function About() {
       <Container>
         <Row className="justify-content-sm-center">
           <Col sm={6}>
-            <Image src="/images/about/Barbara_Martin_At_Hawkesbury_Show.jpeg" fluid/>
+            <Image src="/images/about/Barbara_Martin_At_Hawkesbury_Show.jpeg" fluid rounded/>
           </Col>
         </Row>
         <Row className="justify-content-sm-center">
