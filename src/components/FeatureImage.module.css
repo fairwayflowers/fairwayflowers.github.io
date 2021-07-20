@@ -5,6 +5,9 @@
     display: flex;
     align-items: center;
 }
+.headerImageContainer > img{
+    min-width: 100%;
+}
 
 .headerImageBanner{
     width: 100%;
