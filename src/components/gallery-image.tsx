@@ -1,5 +1,5 @@
-import styles from './FeatureImage.module.css'
-import { Col, Image } from 'react-bootstrap'
+import styles from './GalleryImage.module.css'
+import { Col } from 'react-bootstrap'
 import React from 'react'
 
 interface GalleryImageProp {
@@ -8,8 +8,10 @@ interface GalleryImageProp {
 
 export default function GalleryImage(props: GalleryImageProp) {
     return (
-      <Col sm={3}>
-        <Image src={props.imagePath} thumbnail/>
+      <Col xs={6} sm={4} md={3}>
+          <div className={styles.galleryImageContainer}>
+            <img src={props.imagePath} className={styles.galleryImage}/>
+          </div>
       </Col>
     )
 }
