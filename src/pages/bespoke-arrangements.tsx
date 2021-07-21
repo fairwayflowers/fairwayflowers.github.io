@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import { Col, Container, Row, Image } from 'react-bootstrap'
+import GalleryImage from '../components/gallery-image';
 
 
 
@@ -20,19 +21,12 @@ export default function BespokeArrangements() {
           </Col>
         </Row>
         <Row>
-          {[...Array(36).keys()].map((i: number) => galleryImage(i))}
+          {[...Array(36).keys()]
+            .map((i: number) => 
+              GalleryImage({ imagePath: "/images/bespoke-arrangements/gallery/" + i.toString().padStart(4 ,"0") + ".jpg"})
+          )}
         </Row>
       </Container>
     </>
-  )
-}
-
-function galleryImage(key: number) {
-  let rawKey = key.toString();
-  let imagePath = "/images/bespoke-arrangements/gallery/" + rawKey.padStart(4 ,"0") + ".jpg";
-  return (
-    <Col sm={3}>
-      <Image src={imagePath} thumbnail/>
-    </Col>
   )
 }
