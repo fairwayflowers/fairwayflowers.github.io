@@ -9,13 +9,13 @@ interface NavigationPage {
   text: string,
 }
 const NavigationPages: NavigationPage[] = [
-  { path: "/about", text: "About" },
   { path: "/bespoke-arrangements", text: "Bespoke Arrangements" },
-  { path: "/contact", text: "Contact" },
   { path: "/cut-flowers", text: "Cut Flowers" },
   { path: "/events", text: "Events" },
   { path: "/petal-confetti", text: "Petal Confetti" },
-  { path: "/workshops", text: "Workshops" }
+  { path: "/workshops", text: "Workshops" },
+  { path: "/about", text: "About" },
+  { path: "/contact", text: "Contact" }
 ]
 
 const drawerWidth = 240;
