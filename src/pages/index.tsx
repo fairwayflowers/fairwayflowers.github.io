@@ -23,29 +23,29 @@ export default function Home() {
         </Row>
         <Row className="justify-content-sm-center text-center">
           <Col sm={4}>
-            <Image src="/images/cut_flowers.JPG" rounded fluid/>
+            <Image alt="Cut Flowers" src="/images/cut_flowers.JPG" rounded fluid/>
             <h4>Cut Flowers</h4>
             <p>Hand selected from our private cutting garden, grown in the heart of the Cotswolds.</p>
           </Col>
           <Col sm={4}>
-            <Image src="/images/petal_confetti.jpg" rounded fluid/>
+            <Image alt="Petal Confetti" src="/images/petal_confetti.jpg" rounded fluid/>
             <h4>Petal Confetti</h4>
             <p>Biodegradable and environmentally friendly confetti to enhance your special day.</p>
           </Col>
           <Col sm={4}>
-            <Image src="/images/bespoke_arrangements.jpg" rounded fluid/>
+            <Image alt="Bespoke Arrangements" src="/images/bespoke_arrangements.jpg" rounded fluid/>
             <h4>Bespoke Arrangements</h4>
             <p>Your unique floral vision created in stunning seasonal flowers.</p>
           </Col>
         </Row>
         <Row className="justify-content-sm-center text-center">
           <Col sm={4}>
-            <Image src="/images/workshops.jpg" rounded fluid/>
+            <Image alt="Workshops" src="/images/workshops.jpg" rounded fluid/>
             <h4>Workshops</h4>
             <p>One-to-one or Group Workshops</p>
           </Col>
           <Col sm={4}>
-            <Image src="/images/events.jpg" rounded fluid/>
+            <Image alt="Events" src="/images/events.jpg" rounded fluid/>
             <h4>Events</h4>
             <p>We can attend your events year round.</p>
           </Col>
