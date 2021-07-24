@@ -54,6 +54,13 @@ resource "aws_s3_bucket_policy" "policy_for_cloudfront" {
 resource "aws_cloudfront_distribution" "blog_assets_distribution" {
   enabled = true
 
+  aliases = ["fairwayflowers.leejohnmartin.dev"]
+
+  viewer_certificate {
+    acm_certificate_arn = "arn:aws:acm:us-east-1:553904485373:certificate/f5f13ab6-de89-4477-9241-4464f6354d90"
+    ssl_support_method  = "sni-only"
+  }
+
   comment             = ""
   default_root_object = "index.html"
   price_class         = "PriceClass_100"
@@ -65,9 +72,6 @@ resource "aws_cloudfront_distribution" "blog_assets_distribution" {
     }
   }
 
-  viewer_certificate {
-    cloudfront_default_certificate = true
-  }
 
   origin {
     domain_name = aws_s3_bucket.fairway_flowers_bucket.bucket_domain_name
