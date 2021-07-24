@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    'htmlremap': './src/htmlremap.ts'
+    'htmlremap': './src/htmlremap/handler.ts'
   },
   module: {
     rules: [
@@ -17,7 +17,7 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js' ],
   },
   target: 'node',
-  mode: 'development',
+  mode: 'production',
   output: {
     libraryTarget: 'commonjs2',
     filename: '[name]/handler.js',

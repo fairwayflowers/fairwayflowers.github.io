@@ -54,6 +54,10 @@ resource "aws_s3_bucket_policy" "policy_for_cloudfront" {
 resource "aws_cloudfront_distribution" "blog_assets_distribution" {
   enabled = true
 
+  comment             = ""
+  default_root_object = "index.html"
+  price_class         = "PriceClass_100"
+
   restrictions {
     geo_restriction {
       restriction_type = "whitelist"
@@ -81,7 +85,8 @@ resource "aws_cloudfront_distribution" "blog_assets_distribution" {
     target_origin_id = "s3_blog_assets_origin"
     compress         = true
     forwarded_values {
-      query_string = false
+      query_string            = true
+      query_string_cache_keys = ["v"]
       cookies {
         forward = "none"
       }
@@ -91,7 +96,6 @@ resource "aws_cloudfront_distribution" "blog_assets_distribution" {
 
     lambda_function_association {
       event_type = "origin-request"
-      # We have to provide a specific version of our Lambda function, not just @latest
       lambda_arn   = aws_lambda_function.html-remap-lambda.qualified_arn
       include_body = false
     }
@@ -177,10 +181,8 @@ resource "aws_lambda_function" "html-remap-lambda" {
   filename         = "edge-lambda/dist/htmlremap/handler.zip"
   function_name    = "htmlremap"
   role             = aws_iam_role.cdn-lambda-execution.arn
-  handler          = "htmlremap.handler"
+  handler          = "handler.handler"
   source_code_hash = data.archive_file.htmlremap-zip.output_base64sha256
   runtime          = "nodejs14.x"
-  # this enables versioning of Lambda function
-  # Lambda@Edge requires our functions to be versioned
   publish = true
 }
