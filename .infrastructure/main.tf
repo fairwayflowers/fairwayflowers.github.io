@@ -124,8 +124,8 @@ resource "aws_cloudfront_distribution" "blog_assets_distribution" {
 
 data "archive_file" "htmlremap-zip" {
   type        = "zip"
-  source_file = "edge-lambda/htmlremap.js"
-  output_path = "edge-lambda/htmlremap.zip"
+  source_file = "edge-lambda/dist/htmlremap/handler.js"
+  output_path = "edge-lambda/dist/htmlremap/handler.zip"
 }
 
 
@@ -174,7 +174,7 @@ EOF
 }
 
 resource "aws_lambda_function" "html-remap-lambda" {
-  filename         = "edge-lambda/htmlremap.zip"
+  filename         = "edge-lambda/dist/htmlremap/handler.zip"
   function_name    = "htmlremap"
   role             = aws_iam_role.cdn-lambda-execution.arn
   handler          = "htmlremap.handler"
