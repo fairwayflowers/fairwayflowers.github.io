@@ -9,7 +9,7 @@ export default function Contact() {
         <title>Fairway Flowers - Contact</title>
       </Head>
       <Container>
-        <Row className="justify-content-sm-center">
+        <Row className="my-4 justify-content-sm-center">
           <Col sm={8}>
             <h1>Contact Us</h1>
             <p>Want to order flowers or petal confetti? Please get in touch with us to find out more. </p>

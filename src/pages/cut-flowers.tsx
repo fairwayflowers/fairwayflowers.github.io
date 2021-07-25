@@ -10,14 +10,14 @@ export default function CutFlowers() {
         <title>Fairway Flowers - Cut Flowers</title>
       </Head>
       <Container>
-        <Row className="justify-content-sm-center">
+        <Row className="my-4 justify-content-sm-center">
           <Col sm={8}>
             <h1>Cut Flowers</h1>
             <p>Freshly cut and conditioned, ready to use flowers available for your own arrangements and projects, available by the bucket. We can provide assorted stems for florists, independents and flower groups - suitable for events or your own personal use.</p>
             <p>No request is too small, so contact us now!</p>
           </Col>
         </Row>
-        <Row>
+        <Row className="my-4 justify-content-sm-center">
           {[...Array(16).keys()]
             .map((i: number) =>
               GalleryImage({ imagePath: "/images/cut-flowers/gallery/" + i.toString().padStart(4, "0") + ".jpg" })

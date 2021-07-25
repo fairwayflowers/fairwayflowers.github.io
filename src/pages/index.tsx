@@ -18,12 +18,12 @@ export default function Home() {
         </>
       </FeatureImage>
       <Container>
-        <Row className="justify-content-sm-center">
+        <Row className="my-4 justify-content-sm-center">
           <Col sm={8} className="text-center">
             <h3>Fairway Flowers gives individual care and attention to all your floral visions.</h3>
           </Col>
         </Row>
-        <Row className="justify-content-sm-center text-center">
+        <Row className="my-4 justify-content-sm-center text-center">
           <Col sm={4}>
             {IndexImage("/images/cut_flowers.JPG", "Cut Flowers")}
             <h4>Cut Flowers</h4>

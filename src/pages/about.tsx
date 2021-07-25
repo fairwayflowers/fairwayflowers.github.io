@@ -13,12 +13,12 @@ export default function About() {
         <h1>About</h1>
       </FeatureImage>
       <Container>
-        <Row className="justify-content-sm-center">
+        <Row className="my-4 justify-content-sm-center">
           <Col sm={6}>
             <Image alt="Barbara Martin holding a pot of flowers" src="/images/about/Barbara_Martin_At_Hawkesbury_Show.jpeg" fluid rounded/>
           </Col>
         </Row>
-        <Row className="justify-content-sm-center">
+        <Row className="my-4 justify-content-sm-center">
           <Col sm={6}>
           <h2>It all started when…</h2>
           <p>Based in the heart of the Cotswolds, in the little town of Wotton Under Edge. Founded from a love of flowers and everything about them, Fairway Flowers is dedicated to providing the very best for your needs.</p>

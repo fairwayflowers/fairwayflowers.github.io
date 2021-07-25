@@ -12,7 +12,7 @@ export default function BespokeArrangements() {
         <title>Fairway Flowers - Bespoke Arrangements</title>
       </Head>
       <Container>
-        <Row className="justify-content-sm-center">
+        <Row className="my-4 justify-content-sm-center">
           <Col sm={8}>
             <h1>Bespoke Arrangements</h1>
             <p>Your unique floral vision created in stunning seasonal flowers - birthdays, weddings, sympathy or just because.</p>
@@ -20,7 +20,7 @@ export default function BespokeArrangements() {
             <p>Get in touch to order your arrangements today.</p>
           </Col>
         </Row>
-        <Row>
+        <Row className="my-4 justify-content-sm-center">
           {[...Array(36).keys()]
             .map((i: number) => 
               GalleryImage({ imagePath: "/images/bespoke-arrangements/gallery/" + i.toString().padStart(4 ,"0") + ".jpg"})
