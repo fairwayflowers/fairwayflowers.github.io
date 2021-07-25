@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import Image from 'next/image'
+import styles from './index.module.css'
 
 export default function Workshops() {
   return (
@@ -18,16 +20,27 @@ export default function Workshops() {
         </Row>
         <Row className="my-4 justify-content-sm-center">
           <Col sm={4} className="text-center">
+            {IndexImage("/images/workshops/flower_crowns.jpg", "Flower Crowns")}
             <h3>Flower Crowns</h3>
           </Col>
           <Col sm={4} className="text-center">
+            {IndexImage("/images/workshops/wreaths.jpg", "Wreaths")}
             <h3>Wreaths</h3>
           </Col>
           <Col sm={4} className="text-center">
+            {IndexImage("/images/workshops/hand_bouquets.jpg", "Hand Tied Bouquets")}
             <h3>Hand Tied Bouquets</h3>
           </Col>
         </Row>
       </Container>
     </>
+  )
+}
+
+function IndexImage(imagePath: string, altText: string){
+  return (
+    <div className={styles.indexImageContainer}>
+      <Image src={imagePath} alt={altText ?? ""} layout="fill" className={styles.indexImage}/>
+    </div>
   )
 }

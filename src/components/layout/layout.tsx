@@ -2,6 +2,7 @@ import * as React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import Head from 'next/head'
 import Header from '../header'
+import Footer from '../footer'
 
 export const Layout: React.FunctionComponent = props =>
   <>
@@ -9,4 +10,5 @@ export const Layout: React.FunctionComponent = props =>
     <main>
       {props.children ?? <></>}
     </main>
+    <Footer/>
   </>
