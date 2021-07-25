@@ -1,0 +1,19 @@
+.indexImageContainer {
+    position:relative;
+    overflow:hidden;
+    border-radius: 0.25em;
+    margin-bottom: 1em;
+}
+
+.indexImageContainer::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  
+.indexImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

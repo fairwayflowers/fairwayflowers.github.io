@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import React from 'react'
-import { Col, Container, Row, Image } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
+import Image from 'next/image'
 import FeatureImage from '../components/feature-image'
+import styles from './index.module.css'
 
 export default function Home() {
   return (
@@ -23,34 +25,36 @@ export default function Home() {
         </Row>
         <Row className="justify-content-sm-center text-center">
           <Col sm={4}>
-            <Image alt="Cut Flowers" src="/images/cut_flowers.JPG" rounded fluid/>
+            {IndexImage("/images/cut_flowers.JPG", "Cut Flowers")}
             <h4>Cut Flowers</h4>
             <p>Hand selected from our private cutting garden, grown in the heart of the Cotswolds.</p>
           </Col>
           <Col sm={4}>
-            <Image alt="Petal Confetti" src="/images/petal_confetti.jpg" rounded fluid/>
+            {IndexImage("/images/petal_confetti.jpg", "Petal Confetti")}
             <h4>Petal Confetti</h4>
             <p>Biodegradable and environmentally friendly confetti to enhance your special day.</p>
           </Col>
           <Col sm={4}>
-            <Image alt="Bespoke Arrangements" src="/images/bespoke_arrangements.jpg" rounded fluid/>
+            {IndexImage("/images/bespoke_arrangements.jpg", "Bespoke Arrangements")}
             <h4>Bespoke Arrangements</h4>
             <p>Your unique floral vision created in stunning seasonal flowers.</p>
           </Col>
-        </Row>
-        <Row className="justify-content-sm-center text-center">
           <Col sm={4}>
-            <Image alt="Workshops" src="/images/workshops.jpg" rounded fluid/>
+            {IndexImage("/images/workshops.jpg", "Workshop")}
             <h4>Workshops</h4>
             <p>One-to-one or Group Workshops</p>
-          </Col>
-          <Col sm={4}>
-            <Image alt="Events" src="/images/events.jpg" rounded fluid/>
-            <h4>Events</h4>
-            <p>We can attend your events year round.</p>
           </Col>
         </Row>
       </Container>
     </>
+  )
+}
+
+
+function IndexImage(imagePath: string, altText: string){
+  return (
+    <div className={styles.indexImageContainer}>
+      <Image src={imagePath} alt={altText ?? ""} layout="fill" className={styles.indexImage}/>
+    </div>
   )
 }
