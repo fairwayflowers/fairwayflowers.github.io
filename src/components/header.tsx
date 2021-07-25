@@ -11,7 +11,6 @@ interface NavigationPage {
 const NavigationPages: NavigationPage[] = [
   { path: "/bespoke-arrangements", text: "Bespoke Arrangements" },
   { path: "/cut-flowers", text: "Cut Flowers" },
-  { path: "/events", text: "Events" },
   { path: "/petal-confetti", text: "Petal Confetti" },
   { path: "/workshops", text: "Workshops" },
   { path: "/about", text: "About" },
