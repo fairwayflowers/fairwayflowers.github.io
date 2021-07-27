@@ -1,6 +1,8 @@
 import React from "react";
 import { Col, Container, Row } from 'react-bootstrap'
 import styles from './Footer.module.css'
+import helperStyles from '../components/helper.module.css'
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -9,13 +11,25 @@ export default function Footer() {
         <hr/>
         <Row className="text-center">
           <Col>
-            fairwayflowers@gmail.com
+            <Link href="mailto:fairwayflowers@gmail.com">
+              <a className={helperStyles.linkUnstyled}>
+                fairwayflowers@gmail.com
+              </a>
+            </Link>
           </Col>
           <Col>
-            @fairwayflowers
+            <Link href="https://www.instagram.com/fairwayflowers">
+              <a className={helperStyles.linkUnstyled}>
+                @fairwayflowers
+              </a>
+            </Link>
           </Col>
           <Col>
-            FairwayFlowersShop
+            <Link href="https://www.etsy.com/uk/shop/FairwayFlowersShop">
+              <a className={helperStyles.linkUnstyled}>
+                FairwayFlowersShop
+              </a>
+            </Link>
           </Col>
         </Row>
         <hr/>
