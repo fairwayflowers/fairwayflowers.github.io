@@ -2,6 +2,23 @@ import Head from 'next/head'
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import Link from "next/link";
+import {
+  IconDefinition,
+  findIconDefinition
+} from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab)
+library.add(fas)
+
+const emailIconDefinition: IconDefinition = findIconDefinition({ prefix: 'fas', iconName: 'envelope-square' })
+
+const instagramIconDefinition: IconDefinition = findIconDefinition({ prefix: 'fab', iconName: 'instagram' })
+
+const shoppingIconDefinition: IconDefinition = findIconDefinition({ prefix: 'fas', iconName: 'shopping-bag' })
 
 export default function Contact() {
   return (
@@ -15,22 +32,22 @@ export default function Contact() {
             <h1>Contact Us</h1>
             <p>Want to order flowers or petal confetti? Please get in touch with us to find out more. </p>
             <dl>
-              <dt>Email:</dt>
+              <dt><FontAwesomeIcon icon={emailIconDefinition} /> Email:</dt>
               <dd>
                 <Link href="mailto:fairwayflowers@gmail.com">
-                  <a>fairwayflowers@gmail.com</a>
+                <a>fairwayflowers@gmail.com</a>
                 </Link>
               </dd>
-              <dt>Instagram:</dt>
+              <dt><FontAwesomeIcon icon={instagramIconDefinition} /> Instagram:</dt>
               <dd>
                 <Link href="https://www.instagram.com/fairwayflowers">
-                  <a>@fairwayflowers</a>
+                <a>@fairwayflowers</a>
                 </Link>
               </dd>
-              <dt>Etsy:</dt>
+              <dt><FontAwesomeIcon icon={shoppingIconDefinition} /> Etsy:</dt>
               <dd>
                 <Link href="https://www.etsy.com/uk/shop/FairwayFlowersShop">
-                  <a>FairwayFlowersShop</a>
+                <a>FairwayFlowersShop</a>
                 </Link>
               </dd>
             </dl>
