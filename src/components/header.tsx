@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useRouter } from 'next/router'
 import React from "react";
 import { Nav, Navbar, Container } from "react-bootstrap"
@@ -16,8 +15,6 @@ const NavigationPages: NavigationPage[] = [
   { path: "/about", text: "About" },
   { path: "/contact", text: "Contact" }
 ]
-
-const drawerWidth = 240;
 
 export default function Header() {
   const router = useRouter();
