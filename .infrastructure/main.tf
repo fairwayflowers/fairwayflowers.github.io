@@ -12,12 +12,18 @@ terraform {
 provider "aws" {
   profile = "default"
   region  = "us-east-1"
+  default_tags {
+    tags = {
+      Project = "FairwayFlowers"
+    }
+  }
 }
 
 resource "aws_s3_bucket" "fairway_flowers_bucket" {
   bucket        = "fairway-flowers-website"
   acl           = "private"
   force_destroy = true
+
 }
 
 resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
@@ -54,7 +60,7 @@ resource "aws_s3_bucket_policy" "policy_for_cloudfront" {
 resource "aws_cloudfront_distribution" "blog_assets_distribution" {
   enabled = true
 
-  aliases = ["fairwayflowers.leejohnmartin.dev"]
+  aliases = ["*.fairwayflowers.co.uk","fairwayflowers.leejohnmartin.dev"]
 
   viewer_certificate {
     acm_certificate_arn = "arn:aws:acm:us-east-1:553904485373:certificate/8362b708-d8bb-4d2c-a2f1-aa93301eaf6f"
