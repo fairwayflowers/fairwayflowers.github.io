@@ -57,7 +57,7 @@ resource "aws_cloudfront_distribution" "blog_assets_distribution" {
   aliases = ["fairwayflowers.leejohnmartin.dev"]
 
   viewer_certificate {
-    acm_certificate_arn = "arn:aws:acm:us-east-1:553904485373:certificate/f5f13ab6-de89-4477-9241-4464f6354d90"
+    acm_certificate_arn = "arn:aws:acm:us-east-1:553904485373:certificate/8362b708-d8bb-4d2c-a2f1-aa93301eaf6f"
     ssl_support_method  = "sni-only"
   }
 
