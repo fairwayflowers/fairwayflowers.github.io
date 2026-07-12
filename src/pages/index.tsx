@@ -59,6 +59,15 @@ export default function Home() {
               </a>
             </Link>
           </Col>
+          <Col sm={4}>
+            <Link href="/floristry-truck">
+              <a className={helperStyles.linkUnstyled}>
+                {IndexImage("/images/flower-truck.jpg", "Floristry Truck")}
+                <h4>Floristry Truck</h4>
+                <p>Now available as a pop-up service</p>
+              </a>
+            </Link>
+          </Col>
         </Row>
       </Container>
     </>
