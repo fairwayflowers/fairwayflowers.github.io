@@ -12,6 +12,7 @@ const NavigationPages: NavigationPage[] = [
   { path: "/cut-flowers", text: "Cut Flowers" },
   { path: "/petal-confetti", text: "Petal Confetti" },
   { path: "/workshops", text: "Workshops" },
+  { path: "/floristry-truck", text: "Floristry Truck" },
   { path: "/about", text: "About" },
   { path: "/contact", text: "Contact" }
 ]
