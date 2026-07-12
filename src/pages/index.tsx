@@ -13,15 +13,12 @@ export default function Home() {
       <Head>
         <title>Fairway Flowers</title>
       </Head>
-      <FeatureImage image="/images/bucket_of_flowers.JPG">
-        <>
-          <h1>Fairway Flowers</h1>
-          <h2>Cut Flowers, Petal Confetti and Arrangements</h2>
-        </>
+      <FeatureImage image="/images/fairway-flowers-newlogo.jpg">
       </FeatureImage>
       <Container>
         <Row className="my-4 justify-content-sm-center">
           <Col sm={8} className="text-center">
+            <h2>Cut Flowers, Petal Confetti and Arrangements</h2>
             <h3>Fairway Flowers gives individual care and attention to all your floral visions.</h3>
           </Col>
         </Row>
